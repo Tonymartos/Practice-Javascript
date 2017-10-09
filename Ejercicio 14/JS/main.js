@@ -1,25 +1,22 @@
 //Variables
 var fecha = new Date;
 
-fechasimple =  fecha.getDate()+fecha.getMonth()+fecha.getFullYear();
+var fechasimple = "Fecha: " + fecha.getDate()+"/"+(fecha.getMonth()+1)+"/"+fecha.getFullYear();
 
-var nombredia=new Array(7);
-nombredia[0]="Lunes";
-nombredia[1]="Martes";
-nombredia[2]="Miercoles";
-nombredia[3]="Jueves";
-nombredia[4]="Viernes";
-nombredia[5]="Sabado";
-nombredia[6]="Domingo";
+var horacompleta = fecha.getHours()+fecha.getMinutes()+fecha.getSeconds();
 
-horacompleta = fecha.getHours()+fecha.getMinutes()+fecha.getSeconds();
+var dosfecha = fecha.get
+
+var nombredia=new Array("Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado");
+
+var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+
+
 
 window.onload = function(){
-    
 
-
-}
-
-function fechamostrar(){
-    
+    document.writeln(fechasimple);
+    document.writeln("Hoy es: "+nombredia[fecha.getDay()]+"\n"+fecha.getDay()+" de "+ meses[fecha.getMonth()]+" de "+ fecha.getFullYear());
+    var horatag = document.getElementsByTagName(input)[0];
+    horatag.writeln(horacompleta);
 }
