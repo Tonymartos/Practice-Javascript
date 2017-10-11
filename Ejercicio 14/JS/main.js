@@ -1,22 +1,42 @@
-//Variables
-var fecha = new Date;
+//Variables Globales
 
-var fechasimple = "Fecha: " + fecha.getDate()+"/"+(fecha.getMonth()+1)+"/"+fecha.getFullYear();
-
-var horacompleta = fecha.getHours()+fecha.getMinutes()+fecha.getSeconds();
-
-var dosfecha = fecha.get
-
-var nombredia=new Array("Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado");
-
-var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
 
 
 
 window.onload = function(){
-
-    document.writeln(fechasimple);
-    document.writeln("Hoy es: "+nombredia[fecha.getDay()]+"\n"+fecha.getDay()+" de "+ meses[fecha.getMonth()]+" de "+ fecha.getFullYear());
-    var horatag = document.getElementsByTagName(input)[0];
-    horatag.writeln(horacompleta);
+    fechatotal();
+    setInterval(horacompleta,1000);    
 }
+
+
+function simple(){
+    var fecha = new Date;    
+    fechasimple = "Fecha: " + fecha.getDate()+"/"+(fecha.getMonth()+1)+"/"+fecha.getFullYear();
+    simple = document.getElementById("simple"); 
+    simple.textContent=fechasimple; 
+}
+
+
+
+function completo(){
+    var fecha = new Date;    
+    nombredia=new Array("Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado");    
+    meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+    fechacompleta= "Fecha Completa: " + nombredia[fecha.getDay()]+"\n"+fecha.getDate()+" de "+ meses[fecha.getMonth()]+" de "+ fecha.getFullYear();
+    completa = document.getElementById("completo");
+    completa.textContent=fechacompleta;
+}
+
+function horacompleta(){
+    var fecha = new Date;
+    var hora = fecha.getHours();
+    var minutos = fecha.getMinutes();
+    var segundos = fecha.getSeconds();
+    var horacompleta = hora+":"+minutos+":"+segundos;
+    var cajatexto = document.getElementById("autohora");
+    cajatexto.textContent=valorcaja;
+
+
+}
+
+
