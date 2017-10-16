@@ -1,9 +1,14 @@
-window.onload = function(){
-    document.images[0].src="imagenes/uno.jpeg";
-    document.images[1].src="imagenes/dos.jpeg";
-    document.images[2].src="imagenes/tres.jpeg";
+
+
+function agrandar(){
+document.getElementById('imagen').style.width='456px';
+document.getElementById('imagen').style.height='473px';
+document.getElementById('imagen').style.borderRadius='20px';
+setTimeout(mostrar(),2000);
 }
 
-function agrandar(elemento, idimage){
-    document.images[elemento];
+function volver() {
+document.getElementById('imagen').style.width='20px';
+document.getElementById('imagen').style.height='20px';
+document.getElementById('imagen').style.borderRadius='1px'
 }

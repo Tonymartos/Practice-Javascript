@@ -16,8 +16,6 @@ function simple(){
     simple.textContent=fechasimple; 
 }
 
-
-
 function completo(){
     var fecha = new Date;    
     nombredia=new Array("Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado");    
