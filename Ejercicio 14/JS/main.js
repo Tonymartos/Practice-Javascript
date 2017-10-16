@@ -1,11 +1,7 @@
-//Variables Globales
-
-
-
-
 window.onload = function(){
-    fechatotal();
-    setInterval(horacompleta,1000);    
+    simple();
+    completo();
+    setInterval(horacompleta,2500);
 }
 
 
@@ -30,11 +26,27 @@ function horacompleta(){
     var hora = fecha.getHours();
     var minutos = fecha.getMinutes();
     var segundos = fecha.getSeconds();
-    var horacompleta = hora+":"+minutos+":"+segundos;
-    var cajatexto = document.getElementById("autohora");
-    cajatexto.textContent=valorcaja;
-
-
+    
+    strSegundo = new String(segundos)
+    if(strSegundo.length==1){
+        segundos = "0"+segundos;
+    }
+    
+    strMinutos = new String(minutos)
+    
+    if(strMinutos.length==1){
+        minutos = "0"+minutos;
+    }
+    
+     strHora = new String(hora)
+    
+    if(strHora.length==1){
+        hora = "0"+hora;
+    }
+    
+    var cajatexto = document.getElementsByTagName("input");
+    
+    cajatexto[0].textContent=" "+hora+":"+minutos+":"+segundos;
 }
 
 
