@@ -1,0 +1,24 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+  .calculadora{
+    margin: 0 auto;
+    padding: 0.5em;
+    border: 1em solid black;
+    border-radius: 1em;
+    width: 50%;
+  }
+
+
+
+  .botones input{
+    margin: 0 auto;
+    border-radius: 0.7em;
+  }
+
+  .botonaccion{
+    padding: 0.3em;
+  }
