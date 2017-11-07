@@ -4,11 +4,14 @@ window.onload = function(){
 }
 
 function validarenlace(){
-  var opcion = document.getElementsByTagName('input');
-  for ( i=0; i<opcion.length; i++){
-    if (opcion[i].checked){
-      var pagina = opcion[i].value;
-      return pagina;
+  var opcion = document.getElementById('lista');
+  var marcado = opcion.options[opcion.selectedIndex].value;
+  if (opcion.value == ninguno) {
+    alert("Elija una pagina de la lista");
+  }
+  else{
+      return marcado;
+      }
     }
   }
 }
