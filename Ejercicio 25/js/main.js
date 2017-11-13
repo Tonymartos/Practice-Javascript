@@ -1,17 +1,15 @@
 window.onload = function(){
-  var formulario = document.getElementById('formulariocheck');
-  formulario.action = ""+validarenlace()+".html";
+  var navegar = document.getElementById('enviar').addEventListener("click", validarenlace);  
 }
+
 
 function validarenlace(){
   var opcion = document.getElementById('lista');
   var marcado = opcion.options[opcion.selectedIndex].value;
-  if (opcion.value == ninguno) {
+  if (marcado == "ninguno") {
     alert("Elija una pagina de la lista");
   }
   else{
-      return marcado;
-      }
-    }
+     window.open(marcado + ".html");
   }
 }
