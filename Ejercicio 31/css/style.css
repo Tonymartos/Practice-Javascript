@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 75%;
+}
+
+.imagentexto {
+    font-size: 1.5em;
+    display: flex;
+    justify-content: space-around;
+}
+
+.vida {
+    display: flex;
+}
+
+.textos {
+    padding: 1.5em;
+    margin-top: 5em;
+    display: flex;
+    justify-content: center;
+}
+
+.botones {
+    padding: 0.7em;
+    border: 5px dashed #0e0bb4;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+button {
+    font-size: 1.2em;
+    margin: 0.5em;
+    padding: 1.3em;
+    border-radius: 40%;
+}
