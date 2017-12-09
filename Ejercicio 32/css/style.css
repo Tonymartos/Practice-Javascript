@@ -9,11 +9,19 @@ p{
 }
 
 body{
+    background-color: #8f8181;
     margin: auto;
-    background-color: #a5f044;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+main{
+    padding: 20%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    background-color: #a5f044;    
 }
 
 .datospersonales{
