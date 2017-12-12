@@ -1,21 +1,21 @@
 //Variables Globales
 var debug = true;
 var vidas = 7;
-var palabra = crearPalabra();
+var nuevapalabra = crearPalabra();
 
 window.onload = function(){
     var vidainicial = document.getElementById('tvidas');
     var imagenprinc = document.getElementById('imagen');
     vidainicial.innerHTML="Vidas restantes: " + vidas;
     imagenprinc.src='img/0.png';
-    palabraOculta(palabra);
+    palabraOculta(nuevapalabra);
     clickBotones();
 }
 
 function clickBotones(){
     var botones = document.getElementsByTagName('button');
     for(i=0,fin=botones.length;i<fin;i++){
-        botones[i].addEventListener('click', compararBoton(botones[i]));
+        botones[i].addEventListener('click', compararBoton);
     }
 }
 
@@ -36,15 +36,20 @@ function palabraOculta(ocultopalabra){
     }
 }
 
-function compararBoton(boton){
-    var letraboton = boton.target.value;
+function compararBoton(e){
+    var letraboton = e.target.value;
     var campopalabra = document.getElementById('texto');
-    for(i=0, fin=palabra.length;i<fin;i++){
-        if(palabra.charAt(i)==letraboton){
-            let addletra = document.innerHTML=letraboton;
+    var contenido = campopalabra.innerHTML;
+    for(i=0, fin=nuevapalabra.length;i<fin;i++){
+        if(nuevapalabra.charAt(i)==letraboton){
+            var sletra = contenido.split(" ");
+            for(x=0,fin=sletra;x<fin;i++){
+               var reemplazarc = contenido.replace("_",letraboton);
+               campopalabra.innerHTML=reemplazarc;
+            }
         }else{
             restaupdateFinVida();
-            updateImage();
+            updateImage(vidas);
         }
     }
 }
@@ -52,10 +57,9 @@ function compararBoton(boton){
 function restaupdateFinVida(){
     var titulo = document.getElementById('titulo');
     var vida = document.getElementById('tvidas');
-    var imagen = document.getElementById('imagen');
     var botones = document.getElementsByTagName('button');
-    vidas--;
     vida.innerHTML="Número de vidas: " + vidas;
+    vidas - 1;
     if(vidas==0){
         titulo.innerHTML='HAS PERDIDO';
         titulo.style.color='white';
@@ -66,8 +70,7 @@ function restaupdateFinVida(){
     }
 }
 
-function updateImage(){
-    while(vidas<=7){
+function updateImage(vidas){
         switch(vidas){
             case 0: imagen.src='img/7.png';
             break;
@@ -86,7 +89,7 @@ function updateImage(){
             case 7: imagen.src='img/0.png';
             break;
         }
-    }
+    
 }
 
 
