@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 32</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <main>
+        <form action="" method="get">
+        <fieldset>
+        <legend>Datos personales</legend>
+            <p>Nombre: <input type="text" class="error" id="name"></p>
+            <p>Alias: <input type="text" class="error" id="alias"></p>
+            <p>Contraseña: <input type="text" class="error" id="password"></p>
+            <p>Repetir contraseña: <input type="text" class="error" id="rpassword"></p>
+            <p>Sexo:
+                (M)<input type="radio" name="sexo" id="">
+                (F)<input type="radio" name="sexo" id="">
+            </p>
+            <p>Año nacimiento: <select id="year">
+            </select></p>
+            <p>Aficiones:</p>
+            <p>
+                <input type="checkbox" name="aficion" id="">Música
+                <input type="checkbox" name="aficion" id="">Cine
+                <input type="checkbox" name="aficion" id="">Lectura
+            </p>
+            <p>
+                <input type="checkbox" name="aficion" id="">Informática
+                <input type="checkbox" name="aficion" id="">Televisión
+                <input type="checkbox" name="aficion" id="">Videojuegos
+            </p>
+            <p class="error2" id="eglobal"></p>
+            <p>* Todos los campos son obligatorios</p>
+            <input type="button" id="btnenviar" value="Enviar">
+            <input type="reset" id="btnlimpiar" value="Limpiar">
+        </fieldset>
+    </form>
+    </main>
+</body>
+</html>

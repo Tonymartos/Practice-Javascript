@@ -1,0 +1,19 @@
+form{
+    background-color: rgb(29, 97, 199);
+    padding: 0.5em;
+}
+
+.formulario{
+    float: left;
+    padding: 20px;
+    border: 1px solid #999999;
+
+    background-color: rgb(183, 0, 255);
+}
+
+.datos{
+    float: left;
+    ancho: 500px;
+    margin-left: 20px;
+    padding: 20px;
+}

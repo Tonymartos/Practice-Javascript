@@ -59,7 +59,6 @@ function restaupdateFinVida(){
     var vida = document.getElementById('tvidas');
     var botones = document.getElementsByTagName('button');
     vida.innerHTML="Número de vidas: " + vidas;
-    vidas - 1;
     if(vidas==0){
         titulo.innerHTML='HAS PERDIDO';
         titulo.style.color='white';

@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p{
+    padding: 0.5em;
+}
+
+body{
+    background-color: #8f8181;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main{
+    padding: 20%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    background-color: #a5f044;    
+}
+
+.datospersonales{
+    border: 1px solid grey;
+    padding: 0.5em;
+}

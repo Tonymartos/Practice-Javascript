@@ -31,8 +31,6 @@ function leervalidar() {
     });
 
     fechaDeNacimiento(1920, 2017);
-
-
 }
 
 function comprobarNombre(nombre) {
@@ -48,7 +46,6 @@ function comprobarNombre(nombre) {
 function comprobarAlias(a) {
     var contAlias = a.value;
     var eAlias = /^[A-Z,a-z,0-9]{3,14}$/;
-
     if (comprobarExpresion(a, eAlias) == true) {
         validado[1] = true;
     }
@@ -57,7 +54,6 @@ function comprobarAlias(a) {
 function comprobarPass(p) {
     var contContrasenia = c.value;
     var epass = /^[A-Z, a-z, 0,9]{6,20}$/;
-
     if (comprobarExpresion(p, epass) == true) {
         validado[2] = true;
     }
@@ -70,9 +66,6 @@ function passRepetida(pass1, pass2) {
     } else {
         pass2.className = "correcto";
         validado[3] = true;
-        if (debug) {
-            console.log("Validado 3 => " + validado[3]);
-        }
     }
 }
 
@@ -85,15 +78,15 @@ function fechaDeNacimiento(numInferior, numSuperior) {
     fecha.innerHTML = valores;
 }
 
-function comprobarExpresion(c, e) {
-    var nombre = c.value;
+function comprobarExpresion(p, e) {
+    var nombre = p.value;
     var retorno = false;
     if (e.test(nombre) == false) {
-        c.value = "Dato incorrecto";
-        c.className = "error";
+        p.value = "Dato incorrecto";
+        p.className = "error";
         pglobal.innerHTML = messageerror;
     } else {
-        c.className = "correcto";
+        p.className = "correcto";
         retorno = true;
     }
     return retorno;
@@ -101,7 +94,6 @@ function comprobarExpresion(c, e) {
 
 function enviarFormulario() {
     var formValidado = comprobarFormulario();
-
     if (formValidado == true) {
         alert("El formulario se ha enviado con exito.");
     } else {
