@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DEMO AJAX JQUERY</title>
+</head>
+<body>
+    <div id="texto01"></div>
+    <div id="texto02"></div>
+    <script>
+        // $('#texto01').load('demo.txt' #p1);
+        // $('#texto02').load('demo.txt' #p2);
+        // $('#texto01').load('demo.txt', function(miresponse,mistatus,miobjeto){
+        //     console.log(miresponse);
+        //     console.log(status);
+        //     console.log(miobjeto);
+        // });
+        
+        // $.get("demo.php",function(datos, status){
+        //     console.log(datos);
+        //     console.log(status);
+        //     datos = JSON.parse(datos);
+        //     $('#texto01').html(datos.nombre);
+        //     $('#texto02').html(datos.edad);
+        // });
+
+        // parametros ={nombre: "Maria"};
+        // $.post("demo.php",parametros, function(){
+        //     console.log(datos);
+        //     console.log(status);
+        //     datos = JSON.parse(datos);
+        //     console.log(datos);
+        //     $('#texto01').html(datos.nombre);
+        //     $('#texto02').html(datos.edad);
+        // });
+        
+        $.ajax({
+            data: parametros,
+            url: 'demo.php',
+            type: 'post',
+            beforeSend: function(){
+                $("#texto01").html("enviando datos");
+            },
+            success: function(miresponse){
+                console.log(miresponse);
+                datos = JSON.parse(miresponse);
+                console.log(datos);
+            }
+        });
+    </script>
+</body>
+</html>
